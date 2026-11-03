@@ -126,10 +126,10 @@ The **control plane** is the Core: it decides when each step runs, keeps the que
 
 | piece | what it does | how you get it | guide |
 |---|---|---|---|
-| **Core** | Schedules, queues and starts one pod per step. Never touches the data. | `areteacademy/brevis` on Docker Hub, or `make build` | [Core](https://brevis.sh/docs/core/) |
-| **SDK** | A Go library that extracts, shapes and loads, inside your step. | `go get github.com/AreteAcademy/brevis/sdk@latest` | [Go SDK](https://brevis.sh/docs/sdk/) |
-| **Gateway** | Takes HTTP POST, answers 202 and writes in batches. No database of its own. | `areteacademy/brevis-gateway` | [Ingestion](https://brevis.sh/docs/ingestion/) |
-| **SQL** | Plain `.sql` files become tables and views, in dependency order. | `areteacademy/brevis-sql` | [SQL](https://brevis.sh/docs/sql/) |
+| **Core** | Schedules, queues and starts one pod per step. Never touches the data. | `brevissh/brevis` on Docker Hub, or `make build` | [Core](https://brevis.sh/docs/core/) |
+| **SDK** | A Go library that extracts, shapes and loads, inside your step. | `go get github.com/brevissh/brevis/sdk@latest` | [Go SDK](https://brevis.sh/docs/sdk/) |
+| **Gateway** | Takes HTTP POST, answers 202 and writes in batches. No database of its own. | `brevissh/brevis-gateway` | [Ingestion](https://brevis.sh/docs/ingestion/) |
+| **SQL** | Plain `.sql` files become tables and views, in dependency order. | `brevissh/brevis-sql` | [SQL](https://brevis.sh/docs/sql/) |
 
 Around them: the [console](https://brevis.sh/docs/console/), served by the Core; the [agent](https://brevis.sh/docs/pod-per-step/), which runs a step on a runtime you already keep — where the licence, the GPU or the allow-listed IP lives; and [`brevis` for Python](https://brevis.sh/docs/python/).
 
